@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raiyan Knit Composite Ltd | Skill Matrix Database</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #007bff;
+      --bg: #f5f7fa;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --white: #fff;
+    }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background: var(--white);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      max-width: 700px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 10px;
+      color: var(--text-dark);
+    }
+
+    p {
+      color: var(--text-light);
+      margin: 10px 0 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #005dc1;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 123, 255, 0.5);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Raiyan Knit Composite Ltd</h1>
+    <h2>Skill Matrix Database</h2>
+    <p>Centralized skill data system to monitor operator capability, efficiency, and training progress.</p>
+
+    <button id="openBtn" class="btn">Open Skill Matrix Data</button>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Raiyan Knit Composite Ltd | Industrial Engineering Division
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Base64 encoded link (hidden)
+    const encoded = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5RGtlOWRJd1pBak1Zdl9wdDNiQ3c1OHpUVDQtcmxKUlhvV1ZhZ1hBUEJmZTBvc2I2VmZSYmVxNUtxWFU4Y1hBb2xtdy9leGVj";
+    
+    document.getElementById("openBtn").addEventListener("click", () => {
+      const url = atob(encoded);
+      window.open(url, "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>
