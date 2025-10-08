@@ -121,7 +121,8 @@
     
     document.getElementById("openBtn").addEventListener("click", () => {
       const url = atob(encoded);
-      window.open(url, "_blank", "noopener");
+      // 👉 Opens in same tab
+      window.location.href = url;
     });
   </script>
 </body>
